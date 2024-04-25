@@ -1,0 +1,20 @@
+{
+    "profiles": [
+        {
+            "question": "ストレス解消法は？",
+            "answer": "サウナ",
+            "id": "1"
+        },
+        {
+            "question": "ペットはいますか",
+            "answer": "優（まさる）です",
+            "id": "2"
+        }
+    ],
+    "botInfo": {
+        "name": "aaa",
+        "age": "30",
+        "gender": "女性",
+        "description": "あああ"
+    }
+}

@@ -1,0 +1,377 @@
+/* フラットデザインの基本スタイル */
+body, html {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ヘッダーのスタイル */
+header {
+  background-color: #007bff; /* 明るい緑色 */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* メインコンテンツのスタイル */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+
+/* フォームとテーブルのスタイリング */
+form,
+table {
+  /* width: 100%; */
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+} */
+
+button {
+  background-color: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+  padding: 8px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* テーブルスタイル */
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+/* フォーカス時のスタイル */
+select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* オプションのスタイリング */
+option {
+  padding: 10px;
+}
+
+/* エラーメッセージのスタイリング */
+div[style*='color: red'] {
+  padding: 10px;
+  background-color: #ffdddd;
+  border-left: 4px solid #ff5555;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.message.user {
+  background-color: #f0f0f0;
+  align-self: flex-end;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.message.bot {
+  background-color: #d1edff;
+  align-self: flex-start;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.chat-history {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+
+/* セレクトボックスのスタイリング */
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  box-sizing: border-box; /* ボックスサイズをborder-boxに設定 */
+  appearance: none; /* デフォルトのスタイルを無効化 */
+  cursor: pointer;
+}
+
+/* セレクトボックスに矢印のアイコンを追加 */
+select::-ms-expand {
+  display: none; /* IE用の矢印を非表示に */
+}
+select::after {
+  content: '▼';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* チャットボックスのスタイル */
+/* .chatbox {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+} */
+
+
+
+/* ユーザーのメッセージスタイル */
+.user-message {
+  text-align: right;
+  margin: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+/* チャットボットのメッセージスタイル */
+.bot-message {
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.accordion {
+  cursor: pointer;
+  padding: 18px;
+  /* width: 100%; */
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 19px;
+  transition: 0.4s;
+  border-bottom: 1px solid #ccc;
+  background-color: #ddedfd;
+  margin-bottom: 0;
+}
+
+.active, .accordion:hover {
+  background-color: #65afff;
+}
+
+.panel {
+  /* padding: 0 18px; */
+  /* background-color: white; */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel.open {
+  max-height: 600px;
+  transition: max-height 0.5s ease-in;
+}
+.panel.open form{
+  margin-top: 0px;
+}
+
+.applied {
+  color: #F0AB35; /* オレンジ色 */
+}
+
+.button-applied {
+  color: #F0AB35;
+  border: 2px solid #F0AB35;
+}
+.button-applied:hover {
+  background-color: #F0AB35;
+}
+.Profile-Selection-Dropdown{
+  margin: 46px 20px;
+}
+#profile-select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #F0AB35;
+  border-radius: 4px;
+  background-color: #fff;
+}
+/* Questionスタイル */
+.Question {
+  color: #007bff; /* 薄い青 */
+  background-color: #e7f5ff; /* 非常に薄い青 */
+  padding: 8px 16px;
+  border: none; /* フラットデザインのための境界線なし */
+  border-radius: 4px; /* やや丸みを帯びた角 */
+  box-shadow: none; /* フラットデザインのための影なし */
+}
+
+/* Answerスタイル */
+.Answer {
+  color: #ff7c2c; /* 薄いオレンジ */
+  background-color: #fff4e6; /* 非常に薄いオレンジ */
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+/* 入力フィールドのスタイリング */
+input[type="text"] {
+  width: 100%; /* レスポンシブ対応 */
+  padding: 8px;
+  margin: 8px 0;
+  box-sizing: border-box; /* パディングと境界線を幅に含める */
+  border: 1px solid #ccc; /* 軽い境界線でフラットデザインを保持 */
+  border-radius: 4px;
+}
+
+/* レスポンシブデザインのためのメディアクエリ */
+@media (max-width: 768px) {
+  .Question, .Answer {
+    padding: 4px 8px; /* スマートフォン表示ではパディングを減らす */
+  }
+}
+.ProfileName {
+  color: #F0AB35;
+}
+
+textarea {
+  min-height: 75px; /* キャラの説明用テキストエリアの最小高さ */
+}
+
+.profile-creation-form input[type="text"],
+select {
+  width: 150px; /* テキストボックスとセレクトボックスの高さを統一 */
+}
+/* 各フォーム要素のコンテナ */
+.profile-creation-form .form-group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* 必要に応じて折り返す */
+}
+
+/* フォームのスタイリング */
+.profile-creation-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-creation-form label {
+  display: block;
+  margin-top: 7px;
+  margin-bottom: -7px;
+}
+
+.button-group button{
+margin-right: 25px;
+}
+
+
+/* 機能追加 2024-04-08 */
+.profile-icon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+button.disabled {
+  padding: 2px 9px;
+  font-size: 0.75rem;
+  background-color: #ccc; /* グレーアウト */
+  color: #666;
+  cursor: not-allowed;
+  margin-left: auto; /* ボタンを右端に配置 */
+}
+
+.iconUpBtn{
+  padding: 2px 9px;
+  font-size: 0.75rem;
+}
+
+.ProfileIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: -40px;
+}
+.chatbox > h2{
+  text-align: center;
+}
+.iconUpBtn {
+  margin-left: auto; /* ボタンを右端に配置 */
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  header h1,
+  main h2 {
+    font-size: 20px;
+  }
+
+  form,
+  table {
+    width: 90%;
+  }
+
+  .chatbox {
+    width: 90%;
+    margin: 20px auto;
+  }
+  
+  .accordion {
+    font-size: 14px;
+  }
+}
