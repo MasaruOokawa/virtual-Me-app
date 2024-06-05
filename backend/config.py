@@ -1,0 +1,1 @@
+SERVER_NAME = "nina.codesmith.co.jp:4001"
